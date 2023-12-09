@@ -6,8 +6,8 @@
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">Welcome to my blog site.</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Recent Posts</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Past Posts</button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4 gap-3"><a href="{{ url_for('historicalposts') }}">Posts</a></button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4"><a href="{{ url_for('about') }}"> About</a></button>
       </div>
     </div>
 

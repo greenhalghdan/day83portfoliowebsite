@@ -1,23 +1,21 @@
 {% include "head.html" %}
 <h1>Historical Posts</h1>
 
-
-
 <div class="accordion" id="accordionExample">
+{% for post in posts %}
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#testing_day_{{ post.id }}" aria-expanded="true" aria-controls="testing_day_{{ post.id }}">
         {{ post.title }}
-          Some more random text
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+    <div id="testing_day_{{ post.id }}" class="accordion-collapse collapse collapsed" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        {{ post.subtitle }}
-          some random text
+        {{ post.post }}
       </div>
     </div>
   </div>
-</div>
-{% for post in posts %}{% endfor %}
+
+{% endfor %}
+  </div>
 {% include "footer.html" %}
